@@ -1,8 +1,8 @@
 import numpy as np
 import pygame
-from objetos import *
-from contas import *
-from assets import *
+from .objetos import *
+from .contas import *
+from .assets import *
 import os
 import pygame.mixer as mixer
 from pathlib import Path
