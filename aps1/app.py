@@ -1,8 +1,8 @@
 import numpy as np
 import pygame
-from aps1.objetos import objetos
-from aps1.contas import contas
-from aps1.assets import assets
+from aps1.objetos import *
+from aps1.contas import *
+from aps1.assets import *
 import os
 import pygame.mixer as mixer
 from pathlib import Path
@@ -18,21 +18,21 @@ def main():
     current_dir = Path(os.path.abspath(__file__))
 
     # Caminho para os arquivos de recursos
-    music_path = os.path.join(current_dir, 'assets/musica_jogo/Flashing Lights by Kanye West 64bit version.mp3')
-    explosion_sound_path = os.path.join(current_dir, 'assets/images/Som/270310__littlerobotsoundfactory__explosion_04.wav')
-    laser_sound_path = os.path.join(current_dir, 'assets/images/Som/348163__djfroyd__laser-one-shot-2.wav')
-    background_image_path = os.path.join(current_dir, 'assets/images/backgroung.png')
-    menu_branco_path = os.path.join(current_dir, 'assets/images/Menu_branco.png')
-    menu_vermelho_path = os.path.join(current_dir, 'assets/images/Menu_vermelho.png')
-    menu_fim_path = os.path.join(current_dir, 'assets/images/Fim.png')
-    estilingue_image_path = os.path.join(current_dir, 'assets/images/estilingue/estilingue.png')
-    angrybirds_image_path = os.path.join(current_dir, 'assets/images/angrybird/angrybird.png')
-    meteoro_01_image_path = os.path.join(current_dir, 'assets/images/meteoro/meteoro_01.png')
-    meteoro_02_image_path = os.path.join(current_dir, 'assets/images/meteoro/meteoro_02.png')
+    music_path = os.path.join(current_dir, '/assets/musica_jogo/Flashing Lights by Kanye West 64bit version.mp3')
+    explosion_sound_path = os.path.join(current_dir, '/assets/images/Som/270310__littlerobotsoundfactory__explosion_04.wav')
+    laser_sound_path = os.path.join(current_dir, '/assets/images/Som/348163__djfroyd__laser-one-shot-2.wav')
+    background_image_path = os.path.join(current_dir, '/assets/images/backgroung.png')
+    menu_branco_path = os.path.join(current_dir, '/assets/images/Menu_branco.png')
+    menu_vermelho_path = os.path.join(current_dir, '/assets/images/Menu_vermelho.png')
+    menu_fim_path = os.path.join(current_dir, '/assets/images/Fim.png')
+    estilingue_image_path = os.path.join(current_dir, '/assets/images/estilingue/estilingue.png')
+    angrybirds_image_path = os.path.join(current_dir, '/assets/images/angrybird/angrybird.png')
+    meteoro_01_image_path = os.path.join(current_dir, '/assets/images/meteoro/meteoro_01.png')
+    meteoro_02_image_path = os.path.join(current_dir, '/assets/images/meteoro/meteoro_02.png')
 
-    planeta_1_images_path = os.path.join(current_dir, 'assets/images/planeta_1/ezgif-7-60b5815381-png-100x100-sprite-png')
-    planeta_2_images_path = os.path.join(current_dir, 'assets/images/planeta_2/ezgif-7-6538be690e-png-100x100-sprite-png')
-    estrelas_images_path = os.path.join(current_dir, 'assets/images/estrela/ezgif-5-2fd69d133b-png-140x140-sprite-png')
+    planeta_1_images_path = os.path.join(current_dir, '/assets/images/planeta_1/ezgif-7-60b5815381-png-100x100-sprite-png')
+    planeta_2_images_path = os.path.join(current_dir, '/assets/images/planeta_2/ezgif-7-6538be690e-png-100x100-sprite-png')
+    estrelas_images_path = os.path.join(current_dir, '/assets/images/estrela/ezgif-5-2fd69d133b-png-140x140-sprite-png')
 
     # importando a musica de fundo do jogo
     pygame.mixer.music.load(music_path)
