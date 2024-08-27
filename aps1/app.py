@@ -12,23 +12,43 @@ def main():
     # determinando a primeira tela do jogo
     estado_tela = "inicio"
 
+    # Obtendo o diretório atual onde o script está localizado
+    current_dir = os.path.dirname(__file__)
+
+    # Caminho para os arquivos de recursos
+    music_path = os.path.join(current_dir, 'assets/musica_jogo/Flashing Lights by Kanye West 64bit version.mp3')
+    explosion_sound_path = os.path.join(current_dir, 'assets/images/Som/270310__littlerobotsoundfactory__explosion_04.wav')
+    laser_sound_path = os.path.join(current_dir, 'assets/images/Som/348163__djfroyd__laser-one-shot-2.wav')
+    background_image_path = os.path.join(current_dir, 'assets/images/backgroung.png')
+    menu_branco_path = os.path.join(current_dir, 'assets/images/Menu_branco.png')
+    menu_vermelho_path = os.path.join(current_dir, 'assets/images/Menu_vermelho.png')
+    menu_fim_path = os.path.join(current_dir, 'assets/images/Fim.png')
+    estilingue_image_path = os.path.join(current_dir, 'assets/images/estilingue/estilingue.png')
+    angrybirds_image_path = os.path.join(current_dir, 'assets/images/angrybird/angrybird.png')
+    meteoro_01_image_path = os.path.join(current_dir, 'assets/images/meteoro/meteoro_01.png')
+    meteoro_02_image_path = os.path.join(current_dir, 'assets/images/meteoro/meteoro_02.png')
+
+    planeta_1_images_path = os.path.join(current_dir, 'assets/images/planeta_1/ezgif-7-60b5815381-png-100x100-sprite-png')
+    planeta_2_images_path = os.path.join(current_dir, 'assets/images/planeta_2/ezgif-7-6538be690e-png-100x100-sprite-png')
+    estrelas_images_path = os.path.join(current_dir, 'assets/images/estrela/ezgif-5-2fd69d133b-png-140x140-sprite-png')
+
     # importando a musica de fundo do jogo
-    pygame.mixer.music.load('assets/musica_jogo/Flashing Lights by Kanye West 64bit version.mp3')
+    pygame.mixer.music.load(music_path)
 
     # tocando a musica de background do jogo indeterminadamente
     pygame.mixer.music.play(-1)
 
     # importando os efeitos sonoros do jogo 
-    meteoro_explosao_som = pygame.mixer.Sound('assets/images/Som/270310__littlerobotsoundfactory__explosion_04.wav')
-    laser_tiro = pygame.mixer.Sound('assets/images/Som/348163__djfroyd__laser-one-shot-2.wav')
+    meteoro_explosao_som = pygame.mixer.Sound(explosion_sound_path)
+    laser_tiro = pygame.mixer.Sound(laser_sound_path)
 
     # background do jogo 
-    background_image = pygame.image.load('assets/images/backgroung.png')
+    background_image = pygame.image.load(background_image_path)
 
     # telas de menu e fim do jogo
-    tela_menu_branco = pygame.image.load('assets/images/Menu_branco.png')
-    tela_menu_vermelho = pygame.image.load('assets/images/Menu_vermelho.png')
-    tela_menu_fim = pygame.image.load('assets/images/Fim.png')
+    tela_menu_branco = pygame.image.load(menu_branco_path)
+    tela_menu_vermelho = pygame.image.load(menu_vermelho_path)
+    tela_menu_fim = pygame.image.load(menu_fim_path)
 
     # configuração do tamanho da tela do jogo
     screen = pygame.display.set_mode((1200, 800))
@@ -38,27 +58,27 @@ def main():
     FPS = 60
 
     # imagem estilingue 
-    estilingue_imagem = pygame.image.load('assets/images/estilingue/estilingue.png').convert_alpha()
+    estilingue_imagem = pygame.image.load(estilingue_image_path).convert_alpha()
     estilingue_imagem = pygame.transform.scale(estilingue_imagem, (130, 130))
 
     # imagem angrybirds
-    angrybirds = pygame.image.load('assets/images/angrybird/angrybird.png').convert_alpha()
+    angrybirds = pygame.image.load(angrybirds_image_path).convert_alpha()
     angrybirds = pygame.transform.scale(angrybirds, (50, 50))  # Ajuste o tamanho conforme necessário
 
     # imagens meteoros 
-    meteoro_01_image = pygame.image.load('assets/images/meteoro/meteoro_01.png')
-    meteoro_02_image = pygame.image.load('assets/images/meteoro/meteoro_02.png')
+    meteoro_01_image = pygame.image.load(meteoro_01_image_path)
+    meteoro_02_image = pygame.image.load(meteoro_02_image_path)
 
     # imagens do planeta 1
-    planeta_1_imagens = load_images('assets/images/planeta_1/ezgif-7-60b5815381-png-100x100-sprite-png', 109)
+    planeta_1_imagens = load_images(planeta_1_images_path, 109)
     current_image_planeta_1 = 0
 
     # imagens do planeta 2
-    planeta_2_imagens = load_images('assets/images/planeta_2/ezgif-7-6538be690e-png-100x100-sprite-png', 109)
+    planeta_2_imagens = load_images(planeta_2_images_path, 109)
     current_image_planeta_2 = 0
 
     # imagens estrela
-    estrelas_imagens = load_images('assets/images/estrela/ezgif-5-2fd69d133b-png-140x140-sprite-png', 109)
+    estrelas_imagens = load_images(estrelas_images_path, 109)
     current_image_estrela = 0
 
     # loop principal que roda o jogo
