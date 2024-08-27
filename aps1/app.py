@@ -1,7 +1,9 @@
 import numpy as np
 import pygame
-from .objetos import *
-from .contas import *
+from aps1.objetos import objetos
+from aps1.objetos import contas
+from aps1.objetos import assets
+import os
 import pygame.mixer as mixer
 
 
