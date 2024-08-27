@@ -4,9 +4,9 @@ setup(
     name="aps1",
     version="0.1.0",
     description="Um jogo estilo Angry Birds no espaço",
-    author="Seu Nome",
-    author_email="seuemail@example.com",
-    url="https://github.com/seuusuario/aps1",
+    author="Caio Frigerio",
+    author_email="caioliberal@gmail.com",
+    url="https://github.com/Caiolib/aps1",
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
