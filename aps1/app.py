@@ -1,8 +1,8 @@
 import numpy as np
 import pygame
 from aps1.objetos import objetos
-from aps1.objetos import contas
-from aps1.objetos import assets
+from aps1.contas import contas
+from aps1.assets import assets
 import os
 import pygame.mixer as mixer
 
