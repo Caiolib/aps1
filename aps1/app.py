@@ -1,7 +1,7 @@
 import numpy as np
 import pygame
-from objetos import *
-from contas import *
+from .objetos import *
+from .contas import *
 import pygame.mixer as mixer
 
 
