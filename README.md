@@ -3,7 +3,7 @@
 integrantes:
 Caio Frigerio Liberal(Caiolib)
 
-![GIF DO JOGO](assets/gif_jogo/giphy.gif)
+![GIF DO JOGO](assets/gif_jogo/angry.gif)
 
 # COMO INSTALAR O JOGO
 
