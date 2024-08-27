@@ -5,7 +5,7 @@ from aps1.contas import contas
 from aps1.assets import assets
 import os
 import pygame.mixer as mixer
-
+from pathlib import Path
 
 def main():
     # inicializando o pygame 
@@ -15,7 +15,7 @@ def main():
     estado_tela = "inicio"
 
     # Obtendo o diretório atual onde o script está localizado
-    current_dir = os.path.dirname(__file__)
+    current_dir = Path(os.path.abspath(__file__))
 
     # Caminho para os arquivos de recursos
     music_path = os.path.join(current_dir, 'assets/musica_jogo/Flashing Lights by Kanye West 64bit version.mp3')
