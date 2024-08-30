@@ -1,8 +1,6 @@
 import numpy as np
 import pygame
-from .objetos import *
-from .contas import *
-from .assets import *
+from  aps1 import *
 import os
 import pygame.mixer as mixer
 from pathlib import Path
@@ -18,7 +16,7 @@ def main():
     current_dir = Path(os.path.abspath(__file__))
     paraent_path = current_dir.parent
     # Caminho para os arquivos de recursos
-    music_path = os.path.join(paraent_path, 'assets/musica_jogo/Flashing Lights by Kanye West 64bit version.mp3')
+    music_path = os.path.join(paraent_path / 'assets/musica_jogo/Flashing Lights by Kanye West 64bit version.mp3')
     explosion_sound_path = os.path.join(paraent_path, 'assets/images/Som/270310__littlerobotsoundfactory__explosion_04.wav')
     laser_sound_path = os.path.join(paraent_path, 'assets/images/Som/348163__djfroyd__laser-one-shot-2.wav')
     background_image_path = os.path.join(paraent_path, 'assets/images/backgroung.png')
