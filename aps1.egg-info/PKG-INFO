@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: aps1
+Version: 0.1.0
+Summary: Um jogo estilo Angry Birds no espaço
+Home-page: https://github.com/Caiolib/aps1
+Author: Caio Frigerio
+Author-email: caioliberal@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.10.7
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10.7
+
+UNKNOWN
+
